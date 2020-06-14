@@ -1,0 +1,13 @@
+{
+  "course": "ECE141b",
+  "term"  : "SP20",
+  "assignment" : "FINAL",
+  "students": [
+    {
+      "name " : "Zongheng Cao",
+      "pid"   : "A53308728",
+      "email" : "zocao@ucsd.edu",
+      "os"    : "mac"
+    }
+  ]
+}

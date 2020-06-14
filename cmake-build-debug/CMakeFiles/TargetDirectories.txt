@@ -1,0 +1,3 @@
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/cmake-build-debug/CMakeFiles/MyDatabase.dir
