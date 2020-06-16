@@ -1,7 +1,10 @@
 //  Created by rick gessner on 4/18/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
-//  Modified by Zongheng Cao after skeleton
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  used for in memory space for table
+
 
 #ifndef Schema_hpp
 #define Schema_hpp
@@ -28,7 +31,6 @@ namespace ECE141 {
   using AttributeOpt = std::optional<Attribute>;
 
 
-  //STUDENT: If you're using the Storable interface, add that to Schema class?
 
   class Schema  {
   public:
@@ -37,7 +39,10 @@ namespace ECE141 {
                           Schema(){};
     
                           ~Schema();
-        
+
+
+    //getter and setter
+
     const std::string&    getName() const {return name;}
     std::string&          getNamer1() {return name;}
     const AttributeList&  getAttributes() const {return attributes;}
@@ -55,13 +60,9 @@ namespace ECE141 {
 
     Schema&               addAttribute(const Attribute &anAttribute);
     const AttributeOpt&      getAttribute(const std::string &aName) const;
-      
-        //STUDENT: These methods will be implemented in the next assignment...
 
-    std::string           getPrimaryKeyName() const;
-    uint32_t              getNextAutoIncrementValue();
     
-    //check has a primary key
+    //check whether has a primary key
     string          getPrimaryKey();
     bool            hasAttributes(string name);
 

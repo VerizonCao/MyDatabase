@@ -1,7 +1,6 @@
 //
 // Created by Cao Zongheng on 5/10/20.
 //
-// this class is used for store row collections
 
 #include "RowColloection.h"
 

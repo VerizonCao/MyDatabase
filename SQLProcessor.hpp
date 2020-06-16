@@ -1,10 +1,10 @@
-//
-//  SQLProcessor.hpp
-//  Assignment4
-//
 //  Created by rick gessner on 4/18/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  used for SQL commands, like:  show tables, select, create table, delete table
+//  update data, alter table, describe table....
 
 #ifndef SQLProcessor_hpp
 #define SQLProcessor_hpp
@@ -38,19 +38,10 @@ namespace ECE141 {
     virtual StatusResult  interpret(const Statement &aStatement);
 
 
-
-/*  do these in next assignment
-    StatusResult insert();
-    StatusResult update();
-    StatusResult delete();
-*/
     
   protected:
 
       Database* activeDB;
-    
-    //do you need other data members?
-//    std::vector<Schema> list;
   };
 
 }

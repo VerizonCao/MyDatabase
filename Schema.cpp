@@ -1,6 +1,8 @@
 //  Created by rick gessner on 4/18/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+
 
 #include "Schema.hpp"
 #include <string>
@@ -8,7 +10,6 @@
 
 namespace ECE141 {
 
-     //STUDENT: Implement the Schema class here...
 
     Schema::Schema(const std::string aName): attributes(){
         name = aName;

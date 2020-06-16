@@ -1,6 +1,7 @@
 //
 // Created by Cao Zongheng on 4/24/20.
 //
+// SQL Statement
 
 #ifndef ECE141_SP20_ASSIGNMENT4_ZONGHENG_CAO_SQLSTATEMENT_H
 #define ECE141_SP20_ASSIGNMENT4_ZONGHENG_CAO_SQLSTATEMENT_H
@@ -25,7 +26,7 @@ namespace ECE141 {
 
     using TableField = string;
 
-
+    //create a table
     class CreateTableStatement : public Statement {
     public:
 
@@ -50,7 +51,7 @@ namespace ECE141 {
     };
 
 
-
+    //drop a table
     class DropTableStatement : public Statement{
 
     public:
@@ -72,7 +73,7 @@ namespace ECE141 {
         Database* database;
     };
 
-
+    //show a table
     class ShowTableStatement : public Statement{
 
     public:
@@ -94,6 +95,7 @@ namespace ECE141 {
         Database* database;
     };
 
+    //describe table
     class DescribeTableStatement : public Statement{
 
     public:
@@ -116,7 +118,7 @@ namespace ECE141 {
 
     };
 
-
+    //insert data into a table
     class InsertTableStatement : public Statement{
 
     public:
@@ -141,6 +143,7 @@ namespace ECE141 {
         vector<string>  properties;
     };
 
+    //delete a table
     class DeleteTableStatement : public Statement{
     public:
         DeleteTableStatement(std::string aName, Database* aDatabase, Keywords aStatementType = Keywords::unknown_kw){
@@ -158,6 +161,7 @@ namespace ECE141 {
         Database* database;
     };
 
+    //select from
     class SelectStatement : public Statement{
     public:
         SelectStatement(Database* aDatabase, Keywords aStatementType = Keywords::unknown_kw){
@@ -182,9 +186,11 @@ namespace ECE141 {
         bool         matchJoinCondition(Row& aRow1, Row& aRow2) const;
         StatusResult addTwoRows(Row& aRow1, Row& aRow2, RowColloection& aRowCollections) const;
 
-        // for right join
         StatusResult addRightRow(RowColloection& aRowCollections, Row& aRow2, const AttributeList & aList, string primaryName) const;
 
+
+
+        //inner class, join operation
         struct Join  {
             Join(const std::string &aTable, Keywords aType, const std::string &aLHS, const std::string &aRHS)
                     : joinType(aType),table(aTable) ,lhs(aLHS), rhs(aRHS) {}
@@ -229,6 +235,7 @@ namespace ECE141 {
     };
 
 
+    //update a row of data
     class UpdateStatement : public Statement{
     public:
 
@@ -254,6 +261,7 @@ namespace ECE141 {
     };
 
 
+    //show all indexes
     class ShowIndexStatement : public Statement{
     public:
 
@@ -274,6 +282,7 @@ namespace ECE141 {
     };
 
 
+    //alter a table
     class AlterStatement : public Statement{
     public:
         AlterStatement(Database* aDatabase, Keywords aStatementType = Keywords::unknown_kw){

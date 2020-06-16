@@ -1,10 +1,9 @@
-//
-//  Row.hpp
-//  Assignment4
-//
 //  Created by rick gessner on 4/19/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  A data line in database has many key-value-pair
 
 #ifndef Row_hpp
 #define Row_hpp
@@ -39,7 +38,6 @@ namespace ECE141 {
 
 
 
-    //STUDENT: What other methods do you require?
     vector<KeyValuePair>& getPair(){return pair;}
     const vector<KeyValuePair>& getPair() const {return pair;}
     KeyValues pair2;
@@ -50,7 +48,6 @@ namespace ECE141 {
 
 
   protected:
-    //KeyValues data;  //you're free to change this if you like...
     vector<KeyValuePair> pair;
   };
 

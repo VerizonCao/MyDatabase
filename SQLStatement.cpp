@@ -2,6 +2,7 @@
 // Created by Cao Zongheng on 4/24/20.
 //
 
+
 #include "SQLStatement.h"
 #include <string>
 #include "Attribute.hpp"
@@ -767,7 +768,6 @@ namespace ECE141{
         }
         aTokenizer.next();
         while(aTokenizer.current().data != ";" && aTokenizer.more()){
-            //数字
             if(aTokenizer.current().type == TokenType::number){
                 //length
                 stringstream ss;

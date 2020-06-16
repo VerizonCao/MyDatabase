@@ -1,10 +1,8 @@
-//
-//  Row.cpp
-//  Assignment4
-//
 //  Created by rick gessner on 4/19/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+
 
 #include "Row.hpp"
 
