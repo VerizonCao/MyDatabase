@@ -24,10 +24,10 @@ Download the folder and click run, before you do that:
 
 ### 2. Database Commands: 
 
-* create database <db-name> -- create a .db file into the path you set in 'DB_PATH'
-* use database <db-name> -- open the file, and set it to your active adatabase
-* drop database <db-name> -- drop this database
-* describe database <db-name> -- show a database like this:
+* create database \<db-name\> -- create a .db file into the path you set in 'DB_PATH'
+* use database \<db-name\> -- open the file, and set it to your active adatabase
+* drop database \<db-name\> -- drop this database
+* describe database \<db-name\> -- show a database like this:
 
 ```
 describe databases class;
@@ -43,13 +43,13 @@ Blk#  Type    Other
 ### 3. Table Commands: 
 
 
-* create table <tab-name> (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100)) (<col-name> int|double|string, ...) -- create a table by given attributes and their type
+* create table \<tab-name\> (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100)) (<col-name> int|double|string, ...) -- create a table by given attributes and their type
 
-* drop table <tab-name> -- drop a table
+* drop table \<tab-name\> -- drop a table
 
 * insert into users (name, email) values ('foo', 'foo@ucsd.edu'), ('bar', 'bar@ucsd.edu') -- insert data into a table
 
-* select * from <tab-name>
+* select * from \<tab-name\>
 
 ```
 > select * from users;
@@ -72,7 +72,7 @@ show tables;
 2 rows in set 
 ```
 
-* describe table <tab-name> -- describe the info of attributes
+* describe table \<tab-name\> -- describe the info of attributes
 ```
 > DESCRIBE tasks;
 +-----------+--------------+------+-----+---------+-----------------------------+
@@ -87,7 +87,7 @@ show tables;
 5 rows in set 
 ```
 
-* delete from <tab-name> -- delete all the records associated with a table 
+* delete from \<tab-name\> -- delete all the records associated with a table 
 
 * select * from user order by name limit 5 -- select the user, sort by name and return 5 rows
 
