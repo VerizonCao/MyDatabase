@@ -5,11 +5,11 @@ CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../AppProcessor.cpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../AppProcessor.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../CommandProcessor.hpp
+CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/Attribute.cpp.o: ../Attribute.cpp
@@ -20,11 +20,11 @@ CMakeFiles/MyDatabase.dir/Attribute.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../CommandProcessor.cpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../CommandProcessor.hpp
+CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../AppProcessor.hpp
@@ -38,17 +38,17 @@ CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Folders/FolderView.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Interface/Statement.hpp
+CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Interface/View.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Row.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Tokenizer.hpp
-CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../View.hpp
 
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../DBStatement.cpp
@@ -57,13 +57,13 @@ CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Database.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Row.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../StorageBlock.hpp
 
@@ -73,6 +73,7 @@ CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Database.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Interface/View.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Other/keywords.hpp
@@ -81,7 +82,6 @@ CMakeFiles/MyDatabase.dir/Database.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Schema.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../StorageBlock.hpp
-CMakeFiles/MyDatabase.dir/Database.cpp.o: ../View.hpp
 
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Filters.cpp
@@ -112,6 +112,15 @@ CMakeFiles/MyDatabase.dir/IndexManager.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/IndexManager.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/IndexManager.cpp.o: ../StorageBlock.hpp
 
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Interface/Statement.cpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Interface/Statement.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Other/Errors.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Other/Value.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Other/keywords.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Schema.hpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Tokenizer.hpp
+
 CMakeFiles/MyDatabase.dir/Row.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/Row.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/Row.cpp.o: ../Other/Value.hpp
@@ -132,8 +141,10 @@ CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Filters.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Other/Helpers.hpp
+CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Other/Timer.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Row.hpp
@@ -142,11 +153,9 @@ CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../SQLProcessor.cpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../SQLProcessor.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../SQLStatement.h
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../TableView.h
-CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Timer.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Tokenizer.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Validator.h
 
@@ -156,8 +165,10 @@ CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Filters.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Other/Helpers.hpp
+CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Other/Timer.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Row.hpp
@@ -165,11 +176,9 @@ CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../SQLStatement.cpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../SQLStatement.h
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../TableView.h
-CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Timer.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Tokenizer.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Validator.h
 
@@ -178,15 +187,6 @@ CMakeFiles/MyDatabase.dir/Schema.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/Schema.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/Schema.cpp.o: ../Schema.cpp
 CMakeFiles/MyDatabase.dir/Schema.cpp.o: ../Schema.hpp
-
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Attribute.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Other/Errors.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Other/Value.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Other/keywords.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Statement.cpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Statement.hpp
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/Storage.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/Storage.cpp.o: ../Other/Errors.hpp
@@ -230,8 +230,10 @@ CMakeFiles/MyDatabase.dir/main.cpp.o: ../Filters.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Folders/FolderReader.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../IndexManager.h
+CMakeFiles/MyDatabase.dir/main.cpp.o: ../Interface/Statement.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Other/Helpers.hpp
+CMakeFiles/MyDatabase.dir/main.cpp.o: ../Other/Timer.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Row.hpp
@@ -239,11 +241,9 @@ CMakeFiles/MyDatabase.dir/main.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../SQLProcessor.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../SQLStatement.h
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Schema.hpp
-CMakeFiles/MyDatabase.dir/main.cpp.o: ../Statement.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../TableView.h
-CMakeFiles/MyDatabase.dir/main.cpp.o: ../Timer.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Tokenizer.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Validator.h
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../main.cpp

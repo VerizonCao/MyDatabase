@@ -6,7 +6,7 @@
 
 #include <sstream>
 #include "Database.hpp"
-#include "View.hpp"
+#include "Interface/View.hpp"
 #include "Storage.hpp"
 #include "Other/Value.hpp"
 

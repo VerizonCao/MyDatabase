@@ -174,18 +174,18 @@ CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/SQLProcessor.cpp -o CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.s
 
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: CMakeFiles/MyDatabase.dir/flags.make
-CMakeFiles/MyDatabase.dir/Statement.cpp.o: ../Statement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyDatabase.dir/Statement.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDatabase.dir/Statement.cpp.o -c /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.cpp
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: CMakeFiles/MyDatabase.dir/flags.make
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o: ../Interface/Statement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o -c /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.cpp
 
-CMakeFiles/MyDatabase.dir/Statement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDatabase.dir/Statement.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.cpp > CMakeFiles/MyDatabase.dir/Statement.cpp.i
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.cpp > CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.i
 
-CMakeFiles/MyDatabase.dir/Statement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDatabase.dir/Statement.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.cpp -o CMakeFiles/MyDatabase.dir/Statement.cpp.s
+CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.cpp -o CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.s
 
 CMakeFiles/MyDatabase.dir/Storage.cpp.o: CMakeFiles/MyDatabase.dir/flags.make
 CMakeFiles/MyDatabase.dir/Storage.cpp.o: ../Storage.cpp
@@ -341,7 +341,7 @@ MyDatabase_OBJECTS = \
 "CMakeFiles/MyDatabase.dir/main.cpp.o" \
 "CMakeFiles/MyDatabase.dir/Schema.cpp.o" \
 "CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o" \
-"CMakeFiles/MyDatabase.dir/Statement.cpp.o" \
+"CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o" \
 "CMakeFiles/MyDatabase.dir/Storage.cpp.o" \
 "CMakeFiles/MyDatabase.dir/StorageBlock.cpp.o" \
 "CMakeFiles/MyDatabase.dir/Tokenizer.cpp.o" \
@@ -366,7 +366,7 @@ MyDatabase: CMakeFiles/MyDatabase.dir/DBManager.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/main.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/Schema.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o
-MyDatabase: CMakeFiles/MyDatabase.dir/Statement.cpp.o
+MyDatabase: CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/Storage.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/StorageBlock.cpp.o
 MyDatabase: CMakeFiles/MyDatabase.dir/Tokenizer.cpp.o

@@ -8,7 +8,7 @@
 #ifndef ECE141_SP20_ASSIGNMENT2_ZONGHENG_CAO_DBSTATEMENT_H
 #define ECE141_SP20_ASSIGNMENT2_ZONGHENG_CAO_DBSTATEMENT_H
 
-#include "Statement.hpp"
+#include "Interface/Statement.hpp"
 
 namespace ECE141{
 

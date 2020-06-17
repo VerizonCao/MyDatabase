@@ -1,12 +1,14 @@
 //
 // Created by Cao Zongheng on 4/24/20.
 //
-// SQL Statement
+// this class is used for table service, like create a table
+// delete a table, insert some data and update the data as well
+// as select operation
 
 #ifndef ECE141_SP20_ASSIGNMENT4_ZONGHENG_CAO_SQLSTATEMENT_H
 #define ECE141_SP20_ASSIGNMENT4_ZONGHENG_CAO_SQLSTATEMENT_H
 
-#include "Statement.hpp"
+#include "Interface/Statement.hpp"
 #include "Schema.hpp"
 #include "Other/Errors.hpp"
 #include "Tokenizer.hpp"
@@ -17,7 +19,7 @@
 #include "TableView.h"
 #include "Validator.h"
 #include "Index.hpp"
-#include "Timer.hpp"
+#include "Other/Timer.hpp"
 #include "Other/Helpers.hpp"
 
 using namespace std;

@@ -14,7 +14,7 @@ add_executable(
         main.cpp
         Schema.cpp
         SQLProcessor.cpp
-        Statement.cpp
+        Interface/Statement.cpp
         Storage.cpp
         StorageBlock.cpp
         Tokenizer.cpp

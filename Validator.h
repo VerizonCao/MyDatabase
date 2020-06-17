@@ -1,6 +1,7 @@
 //
 // Created by Cao Zongheng on 5/24/20.
 //
+// used for validate name and type of a table
 
 #ifndef ECE141_SP20_ASSIGNMENT7_ZONGHENG_CAO_VALIDATOR_H
 #define ECE141_SP20_ASSIGNMENT7_ZONGHENG_CAO_VALIDATOR_H

@@ -1,10 +1,9 @@
-//
-//  StorageBlock.hpp
-//  Assignment3
-//
 //  Created by rick gessner on 4/11/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  in memory space for a block
 
 #ifndef StorageBlock_hpp
 #define StorageBlock_hpp
@@ -48,9 +47,9 @@ namespace ECE141 {
       id=aCopy.id;
       return *this;
     }
-    // type 和 id
+    // type and id
     char      type;     //char version of block type {[D]ata, [F]ree... }
-    uint32_t  id;       //use this anyway you like
+    uint32_t  id;
   };
  
   struct StorageBlock {
@@ -62,8 +61,12 @@ namespace ECE141 {
 
     StorageBlock& store(std::ostream &aStream);
 
-    //we use attributes[0] as table name...        header 和 数据
+    //reminders: for header.id:
+    //meta block: the num of blocks in db
+    //table block：the num of rows in db
+    //data block: the index of row in table
     BlockHeader   header;
+    //contains some info that we need to use
     char          data[kPayloadSize];
   };
  

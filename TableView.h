@@ -1,7 +1,8 @@
 //
 // Created by Cao Zongheng on 5/10/20.
 //
-
+// This class is used for show a table by rowCollections
+//
 
 /**    Main function
 *       used to show a table by given attributed and limit number
@@ -54,9 +55,8 @@ namespace ECE141{
         TableView& setIsStar(bool star);
 
     protected:
-        bool isStar;
+        bool isStar;   //isStar means we choose all the attributes in this table
         vector<string> showName;
-
     };
 
 }

@@ -6,7 +6,7 @@
 #define ECE141_SP20_ASSIGNMENT2_ZONGHENG_CAO_FOLDERVIEW_HPP
 
 #include "FolderReader.hpp"
-#include "../View.hpp"
+#include "../Interface/View.hpp"
 
 
 namespace ECE141{

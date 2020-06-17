@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include "CommandProcessor.hpp"
-#include "Statement.hpp"
+#include "Interface/Statement.hpp"
 #include "Tokenizer.hpp"
 #include <memory>
 

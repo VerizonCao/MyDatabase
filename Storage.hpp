@@ -1,10 +1,9 @@
-//
-//  Storage.hpp
-//  Assignment2
-//
 //  Created by rick gessner on 4/5/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  used to read and write data into file in disk
 
 #ifndef Storage_hpp
 #define Storage_hpp
@@ -43,11 +42,11 @@ namespace ECE141 {
     ~Storage();        
     uint32_t        getTotalBlockCount();
 
-        //high-level IO (you're not required to use this, but it may help)...    
+    //high-level IO
     StatusResult    save(Storable &aStorable); //using a stream api
     StatusResult    load(Storable &aStorable); //using a stream api
     
-        //low-level IO...
+    //low-level IO
     StatusResult    readBlock(StorageBlock &aBlock, uint32_t aBlockNumber);
     StatusResult    writeBlock(StorageBlock &aBlock, uint32_t aBlockNumber);
 

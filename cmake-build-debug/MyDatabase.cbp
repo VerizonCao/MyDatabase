@@ -134,6 +134,12 @@
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/IndexManager.h">
 			<Option target="MyDatabase"/>
 		</Unit>
+		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.cpp">
+			<Option target="MyDatabase"/>
+		</Unit>
+		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp">
+			<Option target="MyDatabase"/>
+		</Unit>
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.cpp">
 			<Option target="MyDatabase"/>
 		</Unit>
@@ -162,12 +168,6 @@
 			<Option target="MyDatabase"/>
 		</Unit>
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp">
-			<Option target="MyDatabase"/>
-		</Unit>
-		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.cpp">
-			<Option target="MyDatabase"/>
-		</Unit>
-		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp">
 			<Option target="MyDatabase"/>
 		</Unit>
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Storage.cpp">

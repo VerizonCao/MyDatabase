@@ -1,10 +1,9 @@
-//
-//  Tokenizer.cpp
-//  Database1
-//
 //  Created by rick gessner on 3/19/19.
 //  Copyright © 2019 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+//
+//  Transfer string to token for each commands
 
 #include "Tokenizer.hpp"
 #include "Other/Helpers.hpp"

@@ -1,10 +1,8 @@
-//
-//  Storage.cpp
-//  Assignment2
-//
 //  Created by rick gessner on 4/5/20.
 //  Copyright © 2020 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+
 
 #include "Storage.hpp"
 #include <fstream>
@@ -34,6 +32,7 @@ namespace ECE141 {
   Storage::Storage(const std::string aName, CreateNewStorage) : name(aName),stream() {
     std::string thePath = getDatabasePath(name);
     try {
+        //create the file and open it in binary mode
         stream.open(thePath,std::ios::out | std::ios::binary);
         stream.close();
         stream.open(thePath,std::ios::in | std::ios::out | std::ios::binary);
@@ -69,14 +68,12 @@ namespace ECE141 {
 
   }
 
-    // USE: for use with "storable API" [NOT REQUIRED -- but very useful]
 
   StatusResult Storage::save(Storable &aStorable) {
     //High-level IO: save a storable object (like a table row)...
      return StatusResult{noError};
   }
 
-// USE: for use with "storable API" [NOT REQUIRED -- but very useful]
 
   StatusResult Storage::load(Storable &aStorable) {
     //high-level IO: load a storable object (like a table row)
@@ -84,9 +81,8 @@ namespace ECE141 {
     return StatusResult{noError};
   }
 
-  // USE: write data a given block (after seek)
+  //write a block into a 'block' in db file
   StatusResult Storage::writeBlock(StorageBlock &aBlock, uint32_t aBlockNumber) {
-    //STUDENT: Implement this; this is your low-level block IO...
 
     char insert[1024];  memset(insert,0,sizeof(insert));
 
@@ -107,12 +103,8 @@ namespace ECE141 {
     }
   }
 
-  // USE: read data from a given block (after seek)
+  //read a block into aBlock
   StatusResult Storage::readBlock(StorageBlock &aBlock, uint32_t aBlockNumber) {
-    //STUDENT: Implement this; this is your low-level block IO...
-    //直接找到并且读出来，因为没有返回值
-
-
 
     int start = aBlockNumber*1024;
 
@@ -135,8 +127,8 @@ namespace ECE141 {
     return StatusResult{};
   }
 
+  //delete the info in a block
   StatusResult    Storage::writeBlank(uint32_t aBlockNumber){
-
 
       char insert[1024];   memset(insert,0,sizeof(insert));
 
@@ -152,8 +144,6 @@ namespace ECE141 {
       }
 
   }
-
-
 
 
 }

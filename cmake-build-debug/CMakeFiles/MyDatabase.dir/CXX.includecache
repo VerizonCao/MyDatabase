@@ -41,8 +41,8 @@ iostream
 -
 CommandProcessor.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/CommandProcessor.hpp
-Statement.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
+Interface/Statement.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
 Tokenizer.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Tokenizer.hpp
 memory
@@ -53,8 +53,8 @@ stdio.h
 -
 string
 -
-Statement.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
+Interface/Statement.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/DBManager.cpp
 DBManager.h
@@ -101,16 +101,16 @@ Database.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Database.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/DBStatement.h
-Statement.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
+Interface/Statement.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Database.cpp
 sstream
 -
 Database.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Database.hpp
-View.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/View.hpp
+Interface/View.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/View.hpp
 Storage.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Storage.hpp
 Other/Value.hpp
@@ -135,12 +135,6 @@ RowColloection.h
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/RowColloection.h
 IndexManager.h
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/IndexManager.h
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Filters.cpp
-Filters.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Filters.hpp
-Row.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Filters.hpp
 stdio.h
@@ -173,8 +167,8 @@ filesystem
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Folders/FolderView.hpp
 FolderReader.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Folders/FolderReader.hpp
-../View.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/View.hpp
+../Interface/View.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/View.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Index.hpp
 Storage.hpp
@@ -192,12 +186,34 @@ string
 sstream
 -
 
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.cpp
+Statement.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
+../Tokenizer.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Tokenizer.hpp
+
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
+../Other/keywords.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/keywords.hpp
+iostream
+-
+../Schema.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
+
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/View.hpp
+iostream
+-
+
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Errors.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Helpers.hpp
 keywords.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/keywords.hpp
 algorithm
+-
+
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Timer.hpp
+ctime
 -
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Value.hpp
@@ -222,10 +238,6 @@ map
 Errors.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Errors.hpp
 
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.cpp
-Row.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.hpp
-
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.hpp
 stdio.h
 -
@@ -241,10 +253,6 @@ Other/Value.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Value.hpp
 Attribute.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Attribute.hpp
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/RowColloection.cpp
-RowColloection.h
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/RowColloection.h
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/RowColloection.h
 Row.hpp
@@ -291,8 +299,8 @@ sstream
 -
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/SQLStatement.h
-Statement.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
+Interface/Statement.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Interface/Statement.hpp
 Schema.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
 Other/Errors.hpp
@@ -313,16 +321,10 @@ Validator.h
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Validator.h
 Index.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Index.hpp
-Timer.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Timer.hpp
+Other/Timer.hpp
+/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Timer.hpp
 Other/Helpers.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Helpers.hpp
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.cpp
-Schema.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
-string
--
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
 stdio.h
@@ -337,20 +339,6 @@ optional
 -
 variant
 -
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.cpp
-Statement.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
-Tokenizer.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Tokenizer.hpp
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Statement.hpp
-Other/keywords.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/keywords.hpp
-iostream
--
-Schema.hpp
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Storage.hpp
 stdio.h
@@ -388,12 +376,6 @@ iostream
 string.h
 -
 
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/TableView.cpp
-TableView.h
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/TableView.h
-sstream
--
-
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/TableView.h
 string
 -
@@ -408,10 +390,6 @@ iostream
 iomanip
 -
 
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Timer.hpp
-ctime
--
-
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Tokenizer.hpp
 iostream
 -
@@ -420,10 +398,6 @@ vector
 Other/keywords.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/keywords.hpp
 
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Validator.cpp
-Validator.h
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Validator.h
-
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Validator.h
 Other/Value.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Other/Value.hpp
@@ -431,10 +405,6 @@ Schema.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Schema.hpp
 Row.hpp
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Row.hpp
-
-/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/View.hpp
-iostream
--
 
 /Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/main.cpp
 iostream

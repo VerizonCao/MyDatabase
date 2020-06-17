@@ -3,15 +3,11 @@
 //
 
 
+
 #include "SQLStatement.h"
 #include <string>
 #include "Attribute.hpp"
 #include <sstream>
-
-
-//this class is used for table service, like create a table
-//delete a table, insert some data and update the data as well
-//as select operation
 
 
 namespace ECE141{

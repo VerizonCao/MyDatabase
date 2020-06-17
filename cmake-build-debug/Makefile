@@ -366,6 +366,33 @@ IndexManager.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/IndexManager.cpp.s
 .PHONY : IndexManager.cpp.s
 
+Interface/Statement.o: Interface/Statement.cpp.o
+
+.PHONY : Interface/Statement.o
+
+# target to build an object file
+Interface/Statement.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.o
+.PHONY : Interface/Statement.cpp.o
+
+Interface/Statement.i: Interface/Statement.cpp.i
+
+.PHONY : Interface/Statement.i
+
+# target to preprocess a source file
+Interface/Statement.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.i
+.PHONY : Interface/Statement.cpp.i
+
+Interface/Statement.s: Interface/Statement.cpp.s
+
+.PHONY : Interface/Statement.s
+
+# target to generate assembly for a file
+Interface/Statement.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Interface/Statement.cpp.s
+.PHONY : Interface/Statement.cpp.s
+
 Row.o: Row.cpp.o
 
 .PHONY : Row.o
@@ -500,33 +527,6 @@ Schema.s: Schema.cpp.s
 Schema.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Schema.cpp.s
 .PHONY : Schema.cpp.s
-
-Statement.o: Statement.cpp.o
-
-.PHONY : Statement.o
-
-# target to build an object file
-Statement.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Statement.cpp.o
-.PHONY : Statement.cpp.o
-
-Statement.i: Statement.cpp.i
-
-.PHONY : Statement.i
-
-# target to preprocess a source file
-Statement.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Statement.cpp.i
-.PHONY : Statement.cpp.i
-
-Statement.s: Statement.cpp.s
-
-.PHONY : Statement.s
-
-# target to generate assembly for a file
-Statement.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Statement.cpp.s
-.PHONY : Statement.cpp.s
 
 Storage.o: Storage.cpp.o
 
@@ -726,6 +726,9 @@ help:
 	@echo "... IndexManager.o"
 	@echo "... IndexManager.i"
 	@echo "... IndexManager.s"
+	@echo "... Interface/Statement.o"
+	@echo "... Interface/Statement.i"
+	@echo "... Interface/Statement.s"
 	@echo "... Row.o"
 	@echo "... Row.i"
 	@echo "... Row.s"
@@ -741,9 +744,6 @@ help:
 	@echo "... Schema.o"
 	@echo "... Schema.i"
 	@echo "... Schema.s"
-	@echo "... Statement.o"
-	@echo "... Statement.i"
-	@echo "... Statement.s"
 	@echo "... Storage.o"
 	@echo "... Storage.i"
 	@echo "... Storage.s"

@@ -17,7 +17,6 @@ namespace ECE141{
 
 
     bool         Validator::checkAttributeName(const vector<string>& properties, string theName){
-        //保证了名字和个数都一样
         AttributeList list = schemas[theName]->getAttributes();
         int index1 = 0; int index2 = 0;
         while(index1 < properties.size() && index2 < list.size()){
@@ -37,7 +36,6 @@ namespace ECE141{
         return true;
     }
     bool         Validator::checkAttributeType(const vector<Row*>& aRowList, string theName){
-        //判断type一不一样
         Schema* schema = schemas[theName];
         AttributeList list = schema->getAttributes();
         for(Row* it : aRowList){
@@ -63,7 +61,7 @@ namespace ECE141{
         Schema* schema1 = schemas[joinTableName];
         AttributeList list1 = schema->getAttributes();
 
-        for(auto it : list){   //每一个tableview里面的名字
+        for(auto it : list){
             bool find = false;
             for(auto it1 : list1){
                 if(it == it1.getName()){

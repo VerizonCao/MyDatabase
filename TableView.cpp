@@ -1,9 +1,7 @@
 //
 // Created by Cao Zongheng on 5/10/20.
 //
-//
-// This class is used for show a table by rowCollections
-//
+
 #include "TableView.h"
 #include <sstream>
 
@@ -151,8 +149,6 @@ namespace ECE141{
         isStar = star;
         return * this;
     }
-
-
 
 
 }

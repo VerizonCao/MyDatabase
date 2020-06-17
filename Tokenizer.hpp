@@ -1,10 +1,8 @@
-//
-//  Tokenizer.hpp
-//  Database
-//
 //  Created by rick gessner on 3/19/19.
 //  Copyright © 2019 rick gessner. All rights reserved.
 //
+//  Modified by Zongheng Cao after the skeleton   All rights reserved.
+
 
 #ifndef Tokenizer_hpp
 #define Tokenizer_hpp
@@ -31,13 +29,11 @@ namespace ECE141 {
   const char quote = '"';
 
 
-  //一个function得到char 返回 bool
   //The method name, return type, and arguments essentially define the "type"
   using parseCallback = bool(char aChar);
 
 
 
-  //对于token的分类
   enum class TokenType {
     function, identifier, keyword, number, operators, punctuation, string, unknown
   };
@@ -45,7 +41,6 @@ namespace ECE141 {
   //-----------------
 
 
-  //这就是一个token的样子，我们需要把input command 转化为 token
   struct Token {
 
     // = operator
