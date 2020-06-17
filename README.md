@@ -104,7 +104,7 @@ show indexes;
 1 rows in set 
 ```
 
-* SELECT users.first_name, users.last_name, order_number FROM users LEFT JOIN orders ON users.id=orders.user_id -- use join to cooperate two tables
+* join: select users.first_name, users.last_name, order_number from users LEFT JOIN orders ON users.id=orders.user_id -- use join to cooperate two tables
 ```
 > select last_name, title from Authors left join(right join) Books on Authors.id=Books.author_id;
 +-----------+-------------------------------------------+
