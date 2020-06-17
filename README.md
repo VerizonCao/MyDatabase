@@ -1,9 +1,10 @@
 # MyDatabase
-A mysql-like database using c++
+A mysql-like database using c++, writen by Zongheng Cao.
 
 # What's this?
 This is a database writen in c++, the skeleton is given by ucsd ece141b. 
-The database realized the basic function of a database, which is similar to mysql.
+The project realize some basic functions of a simple database, which is similar to mysql.
+The database is speed up by cache and index.
 
 # How to use it?
 Download the folder and click run, before you do that:
@@ -14,16 +15,33 @@ Download the folder and click run, before you do that:
 5. all the command syntax is similar to mysql, if you have syntax errors, let your code follow the rule of mysql commands.
 
 # functions:
+
+### 1. App Commands:
 * help -- get command help
 * version -- get the current version of the database
 * quit -- quit the program
+
+
+### 2. Database Commands: 
 
 * create database <db-name> -- create a .db file into the path you set in 'DB_PATH'
 * use database <db-name> -- open the file, and set it to your active adatabase
 * drop database <db-name> -- drop this database
 * describe database <db-name> -- show a database like this:
 
-* show databases -- show all the database in your path
+```
+describe databases class;
+Blk#  Type    Other
+----------------------------
+0     Meta 
+1     Schema  "users"
+2     Data    id 1
+3     Data    id 2 
+```
+* show databases -- show all the databases in path.
+
+### 3. Table Commands: 
+
 
 * create table <tab-name> (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100)) (<col-name> int|double|string, ...) -- create a table by given attributes and their type
 
@@ -31,32 +49,81 @@ Download the folder and click run, before you do that:
 
 * insert into users (name, email) values ('foo', 'foo@ucsd.edu'), ('bar', 'bar@ucsd.edu') -- insert data into a table
 
+* select * from <tab-name>
 
+```
+> select * from users;
++---------+--------------------+--------------------+
+| id      | firstname          | lastname           | 
++---------+--------------------+--------------------+
+| 2       | A                  | B                  | 
++---------+--------------------+--------------------+
+1 rows in set (0.000108458 ms.)
+```
+* show tables -- show all the tables in this database
+```
+show tables;
++----------------------+
+| Tables_in_mydb       |
++----------------------+
+| groups               |
+| users                |
++----------------------+
+2 rows in set 
+```
 
+* describe table <tab-name> -- describe the info of attributes
+```
+> DESCRIBE tasks;
++-----------+--------------+------+-----+---------+-----------------------------+
+| Field     | Type         | Null | Key | Default | Extra                       |
++-----------+--------------+------+-----+---------+-----------------------------+
+| id        | integer      | NO   | YES | NULL    | auto_increment primary key  |
+| title     | varchar(100) | NO   |     | NULL    |                             |
+| price     | float        | YES  |     | 0.0     |                             |
+| due_date  | date         | YES  |     | NULL    |                             |
+| status    | boolean      | YES  |     | FALSE   |                             |
++-----------+--------------+------+-----+---------+-----------------------------+
+5 rows in set 
+```
 
+* delete from <tab-name> -- delete all the records associated with a table 
 
+* select * from user order by name limit 5 -- select the user, sort by name and return 5 rows
 
+* update users SET state = CA WHERE zip_code = 92127 -- update the value of some rows
 
+* show indexes -- show all indexes in this db
+```
+show indexes;
++-----------------+-----------------+
+| table           | field           | 
++-----------------+-----------------+
+| users           | id              |  
++-----------------+-----------------+
+1 rows in set 
+```
 
+* SELECT users.first_name, users.last_name, order_number FROM users LEFT JOIN orders ON users.id=orders.user_id -- use join to cooperate two tables
+```
+> select last_name, title from Authors left join(right join) Books on Authors.id=Books.author_id;
++-----------+-------------------------------------------+
+| last_name | title                                     |
++-----------+-------------------------------------------+
+| Rowling   | Harry Potter and the Sorcerer's Stone     |
+| King      | Carrie                                    |
+| King      | The Dark Tower                            |
+| King      | The Green Mile                            |
+| Nguyen    | NULL                                      |
++-----------+-------------------------------------------+
+5 rows in set (0.00 sec)
+```
 
-{
-      "name": "Select Limit Row Count",
-      "setup": "make",
-      "run": "export DB_PATH=/tmp && ./autograder",
-      "input": "create database test4\r\nuse database test4\r\nCREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100))\r\ninsert into users (name, email) values ('foo', 'foo@ucsd.edu'), ('bar', 'bar@ucsd.edu'), ('foobar', 'foobar@ucsd.edu'), ('anotherFoo', 'anotherfoo@ucsd.edu'), ('anotherBar', 'anotherbar@ucsd.edu'), ('anotherFooBar', 'anotherFoobar@ucsd.edu')\r\nselect * from users LIMIT 4\r\nquit",
-      "output": "4 rows in set",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 5
-    },
+# Others:  
 
-
-
-
-
-
- 
-
+1. The select statement will be accelerated by index, a table at least has a primary key index. And may have some index to speed up like: name > 15
+2. When the user use the same command, the processor will use the command cache to get the row Collections quickly.
+3. I use a in-memory LRU cache to store some rows. If a Row isn't used recently, it will be deleted from the cache.
 
 
 
