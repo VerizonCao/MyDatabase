@@ -3,7 +3,7 @@ A mysql-like database using c++, writen by Zongheng Cao.
 
 # What's this?
 This is a database writen in c++, the skeleton is given by ucsd ece141b. 
-The project realize some basic functions of a simple database, which is similar to mysql.
+The project realize some basic functions of a simple database: create, update, select, join......  which is similar to mysql.
 The database is speed up by cache and index.
 
 # How to use it?
@@ -14,8 +14,11 @@ Download the folder and click run, before you do that:
 4. some package import might only works in macos, c++ 17. if you use linux and windows, revise them. 
 5. all the command syntax is similar to mysql, if you have syntax errors, let your code follow the rule of mysql commands.
 
-# functions:
+# When you type a command:
 
+
+
+# functions:
 ### 1. App Commands:
 * help -- get command help
 * version -- get the current version of the database
