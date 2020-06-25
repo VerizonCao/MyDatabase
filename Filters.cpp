@@ -19,6 +19,15 @@ namespace ECE141 {
         return *this;
     }
 
+    //check if it has the field name
+    Expression* Filters::hasThisFiled(string fieldName) const{
+        for(Expression* it : expressions){
+            if(it->lhs.name == fieldName) return it;
+        }
+        return nullptr;
+    }
+
+
     bool          Filters::match(Row& aRow) const{
         if(Or){   //if satisfy, return true
             for(Expression* it : expressions){
@@ -168,6 +177,20 @@ namespace ECE141 {
                 break;
         }
         return *c;
+    }
+
+
+    //index
+    Index* Filters::matchIndex(Index& tempIndex, Expression* it) const{
+            //judge type, > or <
+        if(it->op == Operators::gte_op || it->op == Operators::gt_op){
+
+        }
+        else if(it->op == Operators::lte_op || it->op == Operators::lt_op){
+
+        }
+
+        return nullptr;
     }
 
 

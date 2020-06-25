@@ -86,11 +86,15 @@ CMakeFiles/MyDatabase.dir/Database.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Filters.cpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Filters.hpp
+CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Folders/FolderReader.hpp
+CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Index.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Other/Value.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Other/keywords.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Row.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../RowColloection.h
+CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Storage.hpp
+CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/Index.cpp.o: ../Folders/FolderReader.hpp

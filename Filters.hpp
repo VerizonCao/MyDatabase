@@ -21,6 +21,7 @@
 #include "RowColloection.h"
 #include <algorithm>
 #include <sstream>
+#include "Index.hpp"
 
 namespace ECE141 {
 
@@ -100,6 +101,10 @@ namespace ECE141 {
     const Expressions&  getExpression() const{return expressions;}
 
     StatusResult sortCollections(RowColloection* aRowCollection) const;
+
+    //index part
+    Expression* hasThisFiled(string fieldName) const;
+    Index* matchIndex(Index& tempIndex, Expression* it) const;
 
 
 

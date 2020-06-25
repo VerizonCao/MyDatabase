@@ -265,9 +265,16 @@ namespace ECE141{
         if(matchEx != nullptr){
             string matchIndex = matchEx->lhs.name;
             if(!database->manager.isIndexLoaded(name,matchIndex)) database->loadIndex(name,matchIndex);
-            Index tempIndex = database->manager.getIndex(name, matchIndex);
+            Index* tempIndex = &database->manager.getIndex(name, matchIndex);
+
+            //use filter first to delete some rows, so we don't need to load it from db file
+            //give a index, return a new index, then let tempIndex = newTemp
+            if(Expression* it = filters.hasThisFiled(tempIndex->getFieldName())){
+                Index* newTemp = filters.matchIndex(*tempIndex, it);
+            }
+
             // do something, like  = , < , >
-            for(auto it : tempIndex.getList()){
+            for(auto it : tempIndex->getList()){
                 //check if each index satisfy the requirements
                 ValueType temp = it.first;
                 if((*matchEx)(temp)){
