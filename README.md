@@ -15,8 +15,10 @@ Download the folder and click run, before you do that:
 5. all the command syntax is similar to mysql, if you have syntax errors, let your code follow the rule of mysql commands.
 
 # When you type a command:
-
-
+Firstly, the main fucntion handle the input and get tokens by given command.
+Secondly, the Command processors decide which one is in charge of this command.
+Thirdly, that certain processor create a Statement by that command (factory pattern). 
+Fourthly, that statement parse tokens and use run to make some operations (show something or change something in database)
 
 # functions:
 ### 1. App Commands:
@@ -125,7 +127,7 @@ show indexes;
 # Others:  
 
 1. The select statement will be accelerated by index, a table at least has a primary key index. And may have some index to speed up like: name > 15. The in-memory index is a b+ tree structure, which is easy to find elements greater than 15
-2. When the user use the same command, the processor will use the command cache to get the row Collections quickly.
+2. When the user use the same command, the processor will use the command cache to get the row Collections quickly if hit.
 3. I use a in-memory LRU cache to store some rows. If a Row isn't used recently, it will be deleted from the cache.
 4. contact with me at zocao@eng.ucsd.edu
 
