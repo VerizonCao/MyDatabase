@@ -15,10 +15,10 @@ Download the folder and click run, before you do that:
 5. all the command syntax is similar to mysql, if you have syntax errors, let your code follow the rule of mysql commands.
 
 # When you type a command:
-Firstly, the main fucntion handle the input and get tokens by given command.
-Secondly, the Command processors decide which one is in charge of this command.
-Thirdly, that certain processor create a Statement by that command (factory pattern). 
-Fourthly, that statement parse tokens and use run to make some operations (show something or change something in database)
+* Firstly, the main fucntion handle the input and get tokens by given command.
+* Secondly, the Command processors decide which one is in charge of this command.
+* Thirdly, that certain processor create a Statement by that command (factory pattern). 
+* Fourthly, that statement parse tokens and use run to make some operations (show something or change something in database)
 
 # functions:
 ### 1. App Commands:
