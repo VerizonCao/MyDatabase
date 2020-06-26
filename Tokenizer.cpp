@@ -19,8 +19,19 @@ namespace ECE141 {
       return tokens[anOffset];
     }
     throw std::out_of_range("invalid offset");
-  }  
-  
+  }
+
+  bool Tokenizer::operator==(Tokenizer &aTokenizer) {
+        if(tokens.size() != aTokenizer.size()) return false;
+        for(auto x1 = tokens.begin(), x2 = aTokenizer.tokens.begin(); x1 != tokens.end(); x1++, x2++){
+            if((*x1) != (*x2)){
+                return false;
+            }
+        }
+        return true;
+  }
+
+
   bool Tokenizer::next(int anOffset) {
     if(index+anOffset<=size()) {
       index+=anOffset;

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyDatabase.dir/AppProcessor.cpp.o"
   "CMakeFiles/MyDatabase.dir/Attribute.cpp.o"
+  "CMakeFiles/MyDatabase.dir/Cache.cpp.o"
   "CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o"
   "CMakeFiles/MyDatabase.dir/DBManager.cpp.o"
   "CMakeFiles/MyDatabase.dir/DBStatement.cpp.o"

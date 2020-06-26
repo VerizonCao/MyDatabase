@@ -1,0 +1,6 @@
+create database test1
+use database test1
+CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), score INT)
+insert into users (name,score) values ('foo',91), ('bar',83), ('foobar',80), ('Tom',96), ('Lucy',98), ('Patricia',89),('Barbara',95),('Susan',87),('Jessica',88),('Ann',91),('Gene',91),('John',91),('Kelly',99),('Richard',82),('James',88),('Sharon',88),('Helen',80),('Kenneth',86),('Meryl',81),('Norma',88)
+select * from users where score>90
+quit

@@ -182,15 +182,22 @@ namespace ECE141 {
 
     //index
     Index* Filters::matchIndex(Index& tempIndex, Expression* it) const{
-            //judge type, > or <
+        //create a new index by given index
+        //judge type, > or <
+        Index* res = new Index();
         if(it->op == Operators::gte_op || it->op == Operators::gt_op){
-
+            auto greater = tempIndex.getList().upper_bound(it->rhs.value);
+            for(auto index = greater; index != tempIndex.getList().end(); index++){
+                res->getList()[(*index).first] = (*index).second;
+            }
         }
         else if(it->op == Operators::lte_op || it->op == Operators::lt_op){
-
+            auto fewer = tempIndex.getList().lower_bound(it->rhs.value);
+            for(auto index = tempIndex.getList().begin(); index != fewer; index++){
+                res->getList()[(*index).first] = (*index).second;
+            }
         }
-
-        return nullptr;
+        return res;
     }
 
 

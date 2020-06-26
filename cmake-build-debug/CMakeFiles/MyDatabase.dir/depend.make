@@ -17,6 +17,17 @@ CMakeFiles/MyDatabase.dir/Attribute.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/Attribute.cpp.o: ../Other/Errors.hpp
 CMakeFiles/MyDatabase.dir/Attribute.cpp.o: ../Other/Value.hpp
 
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Cache.cpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Cache.h
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Other/Errors.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Other/Value.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Other/keywords.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Row.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../RowColloection.h
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../StorageBlock.hpp
+CMakeFiles/MyDatabase.dir/Cache.cpp.o: ../Tokenizer.hpp
+
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../CommandProcessor.cpp
 CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../CommandProcessor.hpp
@@ -29,6 +40,7 @@ CMakeFiles/MyDatabase.dir/CommandProcessor.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../AppProcessor.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../CommandProcessor.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../DBManager.cpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../DBManager.h
@@ -51,6 +63,7 @@ CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../StorageBlock.hpp
 CMakeFiles/MyDatabase.dir/DBManager.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../DBStatement.cpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../DBStatement.h
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Database.hpp
@@ -66,8 +79,10 @@ CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Schema.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../StorageBlock.hpp
+CMakeFiles/MyDatabase.dir/DBStatement.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Database.cpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Database.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Folders/FolderReader.hpp
@@ -82,6 +97,7 @@ CMakeFiles/MyDatabase.dir/Database.cpp.o: ../RowColloection.h
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Schema.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Storage.hpp
 CMakeFiles/MyDatabase.dir/Database.cpp.o: ../StorageBlock.hpp
+CMakeFiles/MyDatabase.dir/Database.cpp.o: ../Tokenizer.hpp
 
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Attribute.hpp
 CMakeFiles/MyDatabase.dir/Filters.cpp.o: ../Filters.cpp
@@ -139,6 +155,7 @@ CMakeFiles/MyDatabase.dir/RowColloection.cpp.o: ../RowColloection.cpp
 CMakeFiles/MyDatabase.dir/RowColloection.cpp.o: ../RowColloection.h
 
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../CommandProcessor.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Database.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Filters.hpp
@@ -164,6 +181,7 @@ CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Tokenizer.hpp
 CMakeFiles/MyDatabase.dir/SQLProcessor.cpp.o: ../Validator.h
 
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Database.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Filters.hpp
 CMakeFiles/MyDatabase.dir/SQLStatement.cpp.o: ../Folders/FolderReader.hpp
@@ -226,6 +244,7 @@ CMakeFiles/MyDatabase.dir/Validator.cpp.o: ../Validator.h
 
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../AppProcessor.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../Attribute.hpp
+CMakeFiles/MyDatabase.dir/main.cpp.o: ../Cache.h
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../CommandProcessor.hpp
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../DBManager.h
 CMakeFiles/MyDatabase.dir/main.cpp.o: ../DBStatement.h

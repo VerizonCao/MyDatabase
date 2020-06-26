@@ -96,6 +96,9 @@ namespace ECE141{
             if(getData[i] == ';' && start == 0){
                 string* res = getTableNameAndIndexName(getData.substr(start, i - start));
                 tableName = res[0];  indexName = res[1];
+                //写入内存
+                indexMap[tableName][indexName].setFieldName(indexName);
+                indexMap[tableName][indexName].setTableName(tableName);
                 start = i + 1;
             }
             //load each place

@@ -124,7 +124,7 @@ show indexes;
 
 # Others:  
 
-1. The select statement will be accelerated by index, a table at least has a primary key index. And may have some index to speed up like: name > 15
+1. The select statement will be accelerated by index, a table at least has a primary key index. And may have some index to speed up like: name > 15. The in-memory index is a b+ tree structure, which is easy to find elements greater than 15
 2. When the user use the same command, the processor will use the command cache to get the row Collections quickly.
 3. I use a in-memory LRU cache to store some rows. If a Row isn't used recently, it will be deleted from the cache.
 4. contact with me at zocao@eng.ucsd.edu

@@ -19,6 +19,7 @@
 #include "Row.hpp"
 #include "RowColloection.h"
 #include "IndexManager.h"
+#include "Cache.h"
 
 
 
@@ -94,6 +95,13 @@ namespace ECE141 {
     Database&         setId(int num){id = num; return *this;}
 
     IndexManager      manager;
+
+    //cache
+    // query cache     store 10 most recent query(select only) ahd their result
+    QueryCache queryCache;
+    // block query     store some block recently used  find by block id
+    BlockCache blockCache;
+
 
 
 

@@ -257,12 +257,18 @@ namespace ECE141{
     RowColloection& getRowColloections(Database* database, string name, const Filters& filters){
         //case 1: check if the expressions match the index, include id
         //case 2: if not 1, then 2, we use primary key to avoid iterate
-        RowColloection* aRowCollections = new RowColloection();
+
+        RowColloection* aRowCollections;
+
+
+
+        aRowCollections = new RowColloection();
 
         Expression* matchEx = getMatchExpression(database->manager, name, filters);
 
         //case 1
         if(matchEx != nullptr){
+
             string matchIndex = matchEx->lhs.name;
             if(!database->manager.isIndexLoaded(name,matchIndex)) database->loadIndex(name,matchIndex);
             Index* tempIndex = &database->manager.getIndex(name, matchIndex);
@@ -271,6 +277,7 @@ namespace ECE141{
             //give a index, return a new index, then let tempIndex = newTemp
             if(Expression* it = filters.hasThisFiled(tempIndex->getFieldName())){
                 Index* newTemp = filters.matchIndex(*tempIndex, it);
+                tempIndex = newTemp;
             }
 
             // do something, like  = , < , >
@@ -278,9 +285,22 @@ namespace ECE141{
                 //check if each index satisfy the requirements
                 ValueType temp = it.first;
                 if((*matchEx)(temp)){
-                    //add this row
+
                     StorageBlock aBlock(BlockType::unknown_block);
-                    database->getStorage().readBlock(aBlock, it.second);
+                    //first, search cache
+                    if(StorageBlock* tempBlock = database->blockCache.getABlock(it.second)){
+                        aBlock = *tempBlock;
+                    }
+                    else{
+                        //cache miss, search db
+                        database->getStorage().readBlock(aBlock, it.second);
+
+                        //add into cache
+                        database->blockCache.AddaBlock(it.second, aBlock);
+                    }
+
+
+                    //add into RowCollections
                     addARow(aBlock, aRowCollections, database, name, it.second);   //use the function above
                 }
             }
@@ -290,10 +310,29 @@ namespace ECE141{
         else if(database->getMap()[name]->getPrimaryKey() != ""){
             string key = database->getMap()[name]->getPrimaryKey();
             if(!database->manager.isIndexLoaded(name,key)) database->loadIndex(name,key);
-            Index tempIndex = database->manager.getIndex(name, key);
-            for(auto it : tempIndex.getList()){
+            Index* tempIndex = &database->manager.getIndex(name, key);
+
+            if(Expression* it = filters.hasThisFiled(tempIndex->getFieldName())){
+                Index* newTemp = filters.matchIndex(*tempIndex, it);
+                tempIndex = newTemp;
+            }
+
+            for(auto it : tempIndex->getList()){
                 StorageBlock aBlock(BlockType::unknown_block);
-                database->getStorage().readBlock(aBlock, it.second);
+
+                //first, search cache
+                if(StorageBlock* tempBlock = database->blockCache.getABlock(it.second)){
+                    aBlock = *tempBlock;
+                }
+                else{
+                    //cache miss, search db
+                    database->getStorage().readBlock(aBlock, it.second);
+
+                    //add into cache
+                    database->blockCache.AddaBlock(it.second, aBlock);
+                }
+                
+                //add into RowCollections
                 addARow(aBlock, aRowCollections, database, name, it.second);   //use the function above
             }
 
@@ -311,6 +350,10 @@ namespace ECE141{
                     AttributeList list = database->getMap()[name]->getAttributes();  //get list
                     string theName = data1.substr(0,nameIndex);
                     if(theName == name){
+                        //add into cache
+                        database->blockCache.AddaBlock(i, aBlock);
+
+                        //add into RowCollections
                         addARow(aBlock, aRowCollections, database, name, i);
                     }
                 }
@@ -336,6 +379,11 @@ namespace ECE141{
 
         Timer aTimer;
         aTimer.start();
+
+        //check if SelectStatement has the tokenizer
+
+
+
         //add all the rows into row collection
         RowColloection aRowCollections =  getRowColloections(database, name, filters);
 
@@ -364,6 +412,8 @@ namespace ECE141{
         }
         //if we need limit and show
         bool join = joins.size() > 0;
+
+
         tableView.ShowRowList(aRowCollections,filters.limit ? filters.limitNumber : -1, time, join);
         return StatusResult();
     }
@@ -632,6 +682,8 @@ namespace ECE141{
     }
 
     StatusResult SelectStatement::parse(Tokenizer &aTokenizer){
+
+
         //here, the aToken is at the first element
         vector<string> showName;
         bool from = false;
@@ -644,7 +696,9 @@ namespace ECE141{
                     from = true;
                     aTokenizer.next();
                     if(aTokenizer.current().type != TokenType::identifier) return StatusResult(Errors::syntaxError);
-                    else   name = aTokenizer.current().data; //table name
+                    else{
+                        name = aTokenizer.current().data; //table name
+                    }
                     //add showname
                     tableView.addShowName(showName);
 
@@ -670,6 +724,10 @@ namespace ECE141{
                             Operators operators = operatorChange[aTokenizer.current().data];
                             aTokenizer.next();
                             Operand* operand2 = new Operand(); operand2->name = aTokenizer.current().data;
+                            //add value  create a value by a string
+                            DataType tempType = database->getMap()[name]->getAttribute(operand1->name)->getType();
+                            operand2->value = database->changeStringToDataType(aTokenizer.current().data, tempType);
+                            //
                             Expression* expression = new Expression(*operand1,operators,*operand2);
                             filters.add(expression);
                         }

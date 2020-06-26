@@ -177,6 +177,33 @@ Attribute.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Attribute.cpp.s
 .PHONY : Attribute.cpp.s
 
+Cache.o: Cache.cpp.o
+
+.PHONY : Cache.o
+
+# target to build an object file
+Cache.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Cache.cpp.o
+.PHONY : Cache.cpp.o
+
+Cache.i: Cache.cpp.i
+
+.PHONY : Cache.i
+
+# target to preprocess a source file
+Cache.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Cache.cpp.i
+.PHONY : Cache.cpp.i
+
+Cache.s: Cache.cpp.s
+
+.PHONY : Cache.s
+
+# target to generate assembly for a file
+Cache.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDatabase.dir/build.make CMakeFiles/MyDatabase.dir/Cache.cpp.s
+.PHONY : Cache.cpp.s
+
 CommandProcessor.o: CommandProcessor.cpp.o
 
 .PHONY : CommandProcessor.o
@@ -705,6 +732,9 @@ help:
 	@echo "... Attribute.o"
 	@echo "... Attribute.i"
 	@echo "... Attribute.s"
+	@echo "... Cache.o"
+	@echo "... Cache.i"
+	@echo "... Cache.s"
 	@echo "... CommandProcessor.o"
 	@echo "... CommandProcessor.i"
 	@echo "... CommandProcessor.s"

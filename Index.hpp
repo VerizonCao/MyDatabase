@@ -12,6 +12,7 @@
 #include "Storage.hpp"
 #include "Other/keywords.hpp"
 #include "Other/Value.hpp"
+#include <string>
 
 using namespace std;
 namespace ECE141 {
@@ -40,6 +41,8 @@ namespace ECE141 {
         type=aType;
         changed=false;
       }
+
+
     
     virtual ~Index() {}
     
@@ -47,6 +50,8 @@ namespace ECE141 {
     void                setChanged(bool aValue=true) {changed=aValue;}
     bool                isChanged() {return changed;}
     const std::string&  getFieldName() const {return field;}
+    Index&              setFieldName(string name) {field = name; return *this;}
+    Index&              setTableName(string name) {tableName = name; return *this;}
     uint32_t            getBlockNum() const {return blockNum;}
     
       //manage keys/values in the index...

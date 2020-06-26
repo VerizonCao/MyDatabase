@@ -43,8 +43,9 @@ void showError(ECE141::StatusResult &aResult) {
 }
 
 //build a tokenizer, tokenize input, ask processors to handle...
-ECE141::StatusResult handleInput(std::istream &aStream, ECE141::CommandProcessor &aProcessor) {
+  ECE141::StatusResult handleInput(std::istream &aStream, ECE141::CommandProcessor &aProcessor) {
   ECE141::Tokenizer theTokenizer(aStream);
+
   
   //tokenize the input from aStream...
   ECE141::StatusResult theResult=theTokenizer.tokenize();

@@ -25,4 +25,4 @@ add_executable(
         Validator.cpp
 
 
-        RowColloection.cpp RowColloection.h TableView.cpp TableView.h Index.cpp IndexManager.cpp IndexManager.h)
+        RowColloection.cpp RowColloection.h TableView.cpp TableView.h Index.cpp IndexManager.cpp IndexManager.h Cache.cpp Cache.h)

@@ -92,6 +92,12 @@
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Attribute.hpp">
 			<Option target="MyDatabase"/>
 		</Unit>
+		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Cache.cpp">
+			<Option target="MyDatabase"/>
+		</Unit>
+		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/Cache.h">
+			<Option target="MyDatabase"/>
+		</Unit>
 		<Unit filename="/Users/caozongheng/myplace/ucsd_winter/ECE141/b/MyDatabase/CommandProcessor.cpp">
 			<Option target="MyDatabase"/>
 		</Unit>

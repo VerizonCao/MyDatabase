@@ -50,6 +50,17 @@ namespace ECE141 {
       data=aCopy.data;
       return *this;
     }
+
+    bool operator == (Token &aToken){
+        if(type == aToken.type && keyword == aToken.keyword
+           && data == aToken.data)
+            return true;
+         else return false;
+    }
+
+    bool operator != (Token &aToken){
+        return !( *this == aToken);
+    }
     
     TokenType   type;
     Keywords    keyword;
@@ -62,6 +73,7 @@ namespace ECE141 {
   class Tokenizer {
   public:
     Tokenizer(std::istream &anInputStream);
+
     
     StatusResult  tokenize();
     Token&        tokenAt(size_t anOffset);
@@ -83,11 +95,15 @@ namespace ECE141 {
 
     void          dump(); //utility
 
+    bool operator==(Tokenizer &aTokenizer) ;
+
+
   protected:
     
     std::string   readWhile(parseCallback aCallback);
     std::string   readUntil(char aTerminal, bool addTerminal=false);
     std::string   readUntil(parseCallback aCallback, bool addTerminal=false);
+
 
     std::vector<Token>    tokens;
     std::istream          &input;
