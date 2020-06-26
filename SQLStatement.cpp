@@ -258,12 +258,7 @@ namespace ECE141{
         //case 1: check if the expressions match the index, include id
         //case 2: if not 1, then 2, we use primary key to avoid iterate
 
-        RowColloection* aRowCollections;
-
-
-
-        aRowCollections = new RowColloection();
-
+        RowColloection* aRowCollections = new RowColloection();
         Expression* matchEx = getMatchExpression(database->manager, name, filters);
 
         //case 1
@@ -289,17 +284,15 @@ namespace ECE141{
                     StorageBlock aBlock(BlockType::unknown_block);
                     //first, search cache
                     if(StorageBlock* tempBlock = database->blockCache.getABlock(it.second)){
+                        //automatically move this block from its place to the last one
                         aBlock = *tempBlock;
                     }
                     else{
                         //cache miss, search db
                         database->getStorage().readBlock(aBlock, it.second);
-
                         //add into cache
                         database->blockCache.AddaBlock(it.second, aBlock);
                     }
-
-
                     //add into RowCollections
                     addARow(aBlock, aRowCollections, database, name, it.second);   //use the function above
                 }
@@ -327,7 +320,6 @@ namespace ECE141{
                 else{
                     //cache miss, search db
                     database->getStorage().readBlock(aBlock, it.second);
-
                     //add into cache
                     database->blockCache.AddaBlock(it.second, aBlock);
                 }
@@ -341,22 +333,29 @@ namespace ECE141{
             int id = database->getId();
             for(int i = 2; i<=id; i++){   //界限
                 StorageBlock aBlock(BlockType::data_block);
-                database->getStorage().readBlock(aBlock,i);
-                if(aBlock.header.type == 'D'){
-                    char data[data_size];
-                    memcpy(data,aBlock.data,data_size);
-                    string data1 = data;
-                    int nameIndex = data1.find(";");
-                    AttributeList list = database->getMap()[name]->getAttributes();  //get list
-                    string theName = data1.substr(0,nameIndex);
-                    if(theName == name){
-                        //add into cache
-                        database->blockCache.AddaBlock(i, aBlock);
 
-                        //add into RowCollections
-                        addARow(aBlock, aRowCollections, database, name, i);
+                if(StorageBlock* tempBlock = database->blockCache.getABlock(i)){
+                    aBlock = *tempBlock;
+                }
+
+                else{
+                    database->getStorage().readBlock(aBlock,i);
+                    if(aBlock.header.type == 'D'){
+                        char data[data_size];
+                        memcpy(data,aBlock.data,data_size);
+                        string data1 = data;
+                        int nameIndex = data1.find(";");
+                        AttributeList list = database->getMap()[name]->getAttributes();  //get list
+                        string theName = data1.substr(0,nameIndex);
+                        if(theName == name){
+                            //add into cache
+                            database->blockCache.AddaBlock(i, aBlock);
+                            //add into RowCollections
+                            addARow(aBlock, aRowCollections, database, name, i);
+                        }
                     }
                 }
+
             }
         }
         return *aRowCollections;
@@ -379,10 +378,6 @@ namespace ECE141{
 
         Timer aTimer;
         aTimer.start();
-
-        //check if SelectStatement has the tokenizer
-
-
 
         //add all the rows into row collection
         RowColloection aRowCollections =  getRowColloections(database, name, filters);
